@@ -47,7 +47,7 @@ function Weather() {
   const getWeatherInfo = async () => {
     try {
       const response = await axios.get(
-        `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${process.env.REACT_APP_WEATHER_API}&units=metric`
+        `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${process.env.REACT_APP_WEATHER_API}&units=metric&lang=kr`
       );
       if (response.status !== 200) {
         alert("날씨 정보를 가져오지 못했습니다.");
